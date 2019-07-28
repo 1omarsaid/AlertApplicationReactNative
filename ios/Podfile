@@ -5,7 +5,7 @@ target 'AlertApplicationReactNative' do
   # Pods for AlertApplicationReactNative
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-
+  rn_path = '../node_modules/react-native'
   # Required by RNFirebase
   pod 'Firebase/Core', '~> 6.3.0'
 
@@ -22,7 +22,19 @@ target 'AlertApplicationReactNative' do
   pod 'Firebase/Performance', '~> 6.3.0'
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.13.2'
+  pod 'React', :path => '../node_modules/react-native'
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+  pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
 
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name == "React"
+        target.remove_from_project
+      end
+    end
+  end
+  
 end
 
 target 'AlertApplicationReactNative-tvOS' do

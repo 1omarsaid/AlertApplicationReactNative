@@ -1,4 +1,5 @@
 PODS:
+  - boost-for-react-native (1.63.0)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -7,6 +8,7 @@ PODS:
   - BoringSSL-GRPC/Interface (0.0.3)
   - Crashlytics (3.13.2):
     - Fabric (~> 1.10.2)
+  - DoubleConversion (1.1.5)
   - Fabric (1.10.2)
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
@@ -124,6 +126,11 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.0)
     - GTMSessionFetcher/Core (~> 1.1)
+  - Folly (2018.10.22.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
   - GoogleAppMeasurement (6.0.2):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -178,6 +185,13 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.8.0)
+  - React (0.59.9):
+    - React/Core (= 0.59.9)
+  - React/Core (0.59.9):
+    - yoga (= 0.59.9.React)
+  - RNGestureHandler (1.3.0):
+    - React
+  - yoga (0.59.9.React)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.13.2)
@@ -192,11 +206,17 @@ DEPENDENCIES:
   - Firebase/Performance (~> 6.3.0)
   - Firebase/RemoteConfig (~> 6.3.0)
   - Firebase/Storage (~> 6.3.0)
+  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - React (from `../node_modules/react-native`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - boost-for-react-native
     - BoringSSL-GRPC
     - Crashlytics
+    - DoubleConversion
     - Fabric
     - Firebase
     - FirebaseABTesting
@@ -214,6 +234,7 @@ SPEC REPOS:
     - FirebasePerformance
     - FirebaseRemoteConfig
     - FirebaseStorage
+    - glog
     - GoogleAppMeasurement
     - GoogleToolboxForMac
     - GoogleUtilities
@@ -224,9 +245,21 @@ SPEC REPOS:
     - nanopb
     - Protobuf
 
+EXTERNAL SOURCES:
+  Folly:
+    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+  React:
+    :path: "../node_modules/react-native"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
 SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Crashlytics: 611738c7847f8291a1a51084e35987b86ba6b3ee
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseABTesting: a32c488eb75089a61eb3d86db061dfb909d765db
@@ -244,6 +277,8 @@ SPEC CHECKSUMS:
   FirebasePerformance: 1cf814c294cb0f6e0d36cde0760d09835b13c9ce
   FirebaseRemoteConfig: 7c64ecec5ca63d7c6b304509c3a6f9a036d403d4
   FirebaseStorage: 926d41552072b9fee67aa645760f05f87b7ce604
+  Folly: de497beb10f102453a1afa9edbf8cf8a251890de
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   GoogleAppMeasurement: a35a645835bae31b6bdc0576396bc23908f12a22
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: c7a0b08bda3bf808be823ed151f0e28ac6866e71
@@ -253,7 +288,10 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
+  React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
+  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
+  yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: abfe46218db61defeb6c971b311f855a4e78a6ad
+PODFILE CHECKSUM: da1facc2bf93cf39018a81a2b9f1f11f3f8d0f5d
 
 COCOAPODS: 1.6.1
