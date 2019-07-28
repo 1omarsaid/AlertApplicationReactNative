@@ -20,7 +20,9 @@ const Screens = {
         screen: Home,
         navigationOptions: () => ({
             tabBarIcon:({focused}) => (
-                <MaterialCommunityIcons name={focused? "script-text" : "script-text-outline"} size={27}/>
+                <MaterialCommunityIcons name={focused? "script-text" : "script-text-outline" } size={27}
+                                        color={focused? '#4180b4':'#7897b0'}
+                />
             )
         }),
     },
@@ -28,7 +30,9 @@ const Screens = {
         screen: Explore,
         navigationOptions: () => ({
             tabBarIcon:({focused}) => (
-                <AntDesign name={focused? "appstore1" : "appstore-o"} size={25}/>
+                <AntDesign name={focused? "appstore1" : "appstore-o"} size={25}
+                           color={focused? '#4180b4':'#7897b0'}
+                />
                 
             )
         }),
@@ -38,7 +42,9 @@ const Screens = {
         navigationOptions: () => ({
             tabBarIcon:({focused}) => (
                 focused? <FontAwesome5 name={"globe-americas"} size={25}/>
-                :<Ionicons name={"md-globe"} size={30}/>
+                :<Ionicons name={"md-globe"} size={30}
+                    color={focused? '#4180b4':'#7897b0'}
+                />
             )
         }),
     },
@@ -46,7 +52,9 @@ const Screens = {
         screen: Likes,
         navigationOptions: () => ({
             tabBarIcon:({tintColor, focused}) => (
-                <AntDesign name={ focused ? "heart" : "hearto"} size={25}/>
+                <AntDesign name={ focused ? "heart" : "hearto"} size={25}
+                           color={focused? '#4180b4':'#7897b0'}
+                />
             )
         }),
     },
@@ -68,6 +76,7 @@ const Screens = {
 const config = {
     tabBarOptions: {
         showLabel: false
+
     } 
 };
 
