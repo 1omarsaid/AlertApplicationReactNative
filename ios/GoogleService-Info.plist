@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1056286612506-nds6psiuo66cqpq3k85oke4ua5irrgrh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1056286612506-nds6psiuo66cqpq3k85oke4ua5irrgrh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDcaO68SDvR21Z5E1Eul3Hvru-ldV4ABxo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1056286612506</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.invertase.AlertApplicationReactNative</string>
+	<key>PROJECT_ID</key>
+	<string>alertapplicationreactnative</string>
+	<key>STORAGE_BUCKET</key>
+	<string>alertapplicationreactnative.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1056286612506:ios:0fa29e92ef09e74c</string>
+	<key>DATABASE_URL</key>
+	<string>https://alertapplicationreactnative.firebaseio.com</string>
+</dict>
+</plist>

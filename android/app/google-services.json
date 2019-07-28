@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1056286612506",
+    "firebase_url": "https://alertapplicationreactnative.firebaseio.com",
+    "project_id": "alertapplicationreactnative",
+    "storage_bucket": "alertapplicationreactnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056286612506:android:194e7a2ca0293a69",
+        "android_client_info": {
+          "package_name": "com.omarsaid.alertapplicationreactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056286612506-6vl4vg6sau3nq2r6dcm81mkfnt37s319.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPgyUJOyMo_5R3UFz-O67ZeGA6m7qrx70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056286612506-6vl4vg6sau3nq2r6dcm81mkfnt37s319.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1056286612506-nds6psiuo66cqpq3k85oke4ua5irrgrh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.invertase.AlertApplicationReactNative"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
