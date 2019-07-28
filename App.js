@@ -13,7 +13,7 @@ const App = createAppContainer(createSwitchNavigator(
     Root
   },
   {
-    initialRouteName: 'Register'
+    initialRouteName: 'Root'
   }
 ));
 export default App

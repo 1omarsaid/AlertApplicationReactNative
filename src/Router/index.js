@@ -7,5 +7,12 @@ const Screens = {
 
 }
 
-const Root = createStackNavigator(Screens)
+const config = {
+    headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false
+    }
+}
+
+const Root = createStackNavigator(Screens, config)
 export default createAppContainer(Root);
