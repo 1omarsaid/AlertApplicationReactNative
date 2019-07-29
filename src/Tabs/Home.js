@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, FlatList, StyleSheet, TouchableOpacity, Text, Dimensions } from 'react-native';
+import {View, FlatList, StyleSheet, TouchableOpacity, Text, Dimensions, Image } from 'react-native';
 import {HomeHeader,Post} from '../Components';
 
 import {images, posts} from '../Constants'
@@ -33,7 +33,8 @@ class Home extends Component {
                     style={styles.postfeed}
                 />
                 <TouchableOpacity onPress={this.makeAPost} style={styles.fab}>
-                    <Text style={styles.fabIcon}>+</Text>
+                    <Image source = {require('../images/plus.png')} 
+                    style={{width: '100%', height:'100%' }}/>
                 </TouchableOpacity>
             </View>
         );
@@ -56,19 +57,14 @@ const styles = StyleSheet.create({
     },
     fab: {
         position: "absolute",
-        width: Math.round(Dimensions.get('window').height) * 0.06,
-        height: Math.round(Dimensions.get('window').height) * 0.06,
+        width: Math.round(Dimensions.get('window').height) * 0.075,
+        height: Math.round(Dimensions.get('window').height) * 0.075,
         alignItems: "center",
         justifyContent: "center",
         right: Math.round(Dimensions.get('window').height) * 0.03,
         bottom: Math.round(Dimensions.get('window').height) * 0.07,
-        backgroundColor: '#2980b9', 
         borderRadius: Math.round(Dimensions.get('window').height) * 0.03,
         elevation: 8 
-    },
-    fabIcon: {
-        fontSize: 40,
-        color: 'white'
     }
 });
 
