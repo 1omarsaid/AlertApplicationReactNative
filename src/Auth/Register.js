@@ -14,11 +14,17 @@ export default class SignUp extends React.Component {
 
 
 
-  handleSignUp = () => {
+  handleSignUp = (name, email) => {
+      
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then((res) =>{
+        firebase.database().ref('users/',res.user.uid).set({
+            name,
+            email
+        })
+        console.log(res.user.uid)
         res.user.sendEmailVerification();
         this.props.navigation.navigate("Root");
       } )
@@ -84,20 +90,14 @@ export default class SignUp extends React.Component {
                         value={this.state.confirmpassword}
                         onChangeText={confirmpassword => this.setState({ confirmpassword })}
                         />
-                    <TouchableOpacity style={styles.buttonContainer} onPress={this.handleSignUp}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={() => this.handleSignUp(this.state.name, this.state.email)}>
                         <Text style={styles.buttonText}>REGISTER</Text>
                     </TouchableOpacity>
-
-                    {/* <Button 
-                        title="Already have an account? Login"
-                        // style={styles.alreadyhaveaccount}
-                        onPress={() => this.props.navigation.navigate('Login')}
-                        /> */}
                     <TouchableOpacity style={styles.alreadyhaveaccount}>
                         <Text onPress={() => this.props.navigation.navigate('Login')} style={styles.buttonText}>Already have an account? Login!</Text>
                     </TouchableOpacity>
 
-                    {this.state.errorMessage && <Text style={{ color: 'red' }}>
+                    {this.state.errorMessage && <Text style={{ color: 'red' , textAlign: "center", width: '100%'}}>
                     {this.state.errorMessage}
                     </Text>}
 
@@ -119,10 +119,11 @@ const styles = StyleSheet.create({
     },
     input:{
         height: 40,
-        backgroundColor: 'rgba(255,255,255,0.2)',
         marginBottom: 7,
         color: '#FFF',
         paddingHorizontal: 5, 
+        borderBottomColor: 'white',
+        borderBottomWidth: 1
     },
     buttonContainer: {
         backgroundColor: '#3498db',

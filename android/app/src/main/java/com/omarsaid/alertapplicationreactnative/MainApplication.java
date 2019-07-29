@@ -3,6 +3,7 @@ package com.omarsaid.alertapplicationreactnative;
 import android.support.multidex.MultiDexApplication;
 
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -42,6 +43,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new ImagePickerPackage(),
             new VectorIconsPackage(),
         new RNFirebasePackage(),
         new RNGestureHandlerPackage(),
