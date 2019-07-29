@@ -1,6 +1,6 @@
 // Login.js
 import React from 'react';
-import {View, StyleSheet, Text, KeyboardAvoidingView, TextInput, SafeAreaView, TouchableOpacity, Dimensions, Button} from 'react-native'
+import {View, StyleSheet, Text, KeyboardAvoidingView, TextInput, SafeAreaView, TouchableOpacity, Dimensions, Button, Image} from 'react-native'
 import firebase from 'react-native-firebase'
 
 export default class Login extends React.Component {
@@ -28,7 +28,10 @@ export default class Login extends React.Component {
         
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <SafeAreaView style={styles.formContainer}>
-                <View style={styles.container2}>
+                        <Image 
+                            source = {require('../images/alertlogo.png')}
+                            style={styles.imageLogo} />
+                    
                     <TextInput 
                         style={styles.input} 
                         placeholder='Email (University Domain)'
@@ -62,7 +65,6 @@ export default class Login extends React.Component {
 
                     {this.state.errorMessage && <Text style={{ color: 'red' }}> {this.state.errorMessage} </Text>}
 
-                </View>
                 
                 </SafeAreaView>
 
@@ -79,16 +81,18 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#2980b9',
         height: '100%',
-        width: '100%'
+        width: '100%',
+        alignItems: "center"
         
     },
     logoContainer:{
         alignItems: "center",
         flex: 1,
         top: 150,
+
     },
     formContainer:{
-
+        width: '100%'
     },
     logo:{
         width: 250,
@@ -104,10 +108,11 @@ const styles = StyleSheet.create({
     },
     input:{
         height: 40,
-        backgroundColor: 'rgba(255,255,255,0.2)',
         marginBottom: 7,
         color: '#FFF',
         paddingHorizontal: 5, 
+        borderBottomColor: 'white',
+        borderBottomWidth: 1
     },
     buttonContainer: {
         backgroundColor: '#3498db',
@@ -126,9 +131,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         opacity: 0.8,
     },
-    container2: {
-        top: Math.round(Dimensions.get('window').height) * 0.3,
-        width: Math.round(Dimensions.get('window').width) * 0.95,
+    imageLogo: {
+        width: Math.round(Dimensions.get('window').height) * 0.2 , 
+        height: Math.round(Dimensions.get('window').height) * 0.2,
+        alignContent: "center",
         
     }
 
