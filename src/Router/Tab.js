@@ -14,7 +14,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
+import Entypo from 'react-native-vector-icons/Entypo'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
 const Screens = {
     Home: {
         screen: Home,
@@ -30,8 +31,9 @@ const Screens = {
         screen: Explore,
         navigationOptions: () => ({
             tabBarIcon:({focused}) => (
-                <AntDesign name={focused? "appstore1" : "appstore-o"} size={25}
-                           color={focused? '#4180b4':'#7897b0'}
+                focused? <Entypo name={"shopping-cart"} size={25}/>
+                :<EvilIcons name={"cart"} size={35}
+                    color={focused? '#4180b4':'#7897b0'}
                 />
                 
             )
@@ -52,7 +54,8 @@ const Screens = {
         screen: Likes,
         navigationOptions: () => ({
             tabBarIcon:({tintColor, focused}) => (
-                <AntDesign name={ focused ? "heart" : "hearto"} size={25}
+
+                <AntDesign name={focused? "appstore1" : "appstore-o"} size={25}
                            color={focused? '#4180b4':'#7897b0'}
                 />
             )
