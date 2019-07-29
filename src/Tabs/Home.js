@@ -16,6 +16,10 @@ class Home extends Component {
         />
     )
 
+    makeAPost = () => {
+        this.props.navigation.navigate('PostPage')
+    }
+
 
 
     render(){
@@ -28,7 +32,7 @@ class Home extends Component {
                     renderItem={this.renderPosts}
                     style={styles.postfeed}
                 />
-                <TouchableOpacity onPress={() => alert('FAB Clicked')} style={styles.fab}>
+                <TouchableOpacity onPress={this.makeAPost} style={styles.fab}>
                     <Text style={styles.fabIcon}>+</Text>
                 </TouchableOpacity>
             </View>
@@ -56,8 +60,8 @@ const styles = StyleSheet.create({
         height: Math.round(Dimensions.get('window').height) * 0.06,
         alignItems: "center",
         justifyContent: "center",
-        right: 20,
-        bottom: 40,
+        right: Math.round(Dimensions.get('window').height) * 0.03,
+        bottom: Math.round(Dimensions.get('window').height) * 0.07,
         backgroundColor: '#2980b9', 
         borderRadius: Math.round(Dimensions.get('window').height) * 0.03,
         elevation: 8 
