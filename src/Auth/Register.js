@@ -1,7 +1,8 @@
 import React from 'react'
-import {View, StyleSheet, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView, Dimensions, Button} from 'react-native'
+import {View, StyleSheet, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView, Dimensions, Button, Image} from 'react-native'
 import firebase from 'react-native-firebase'
 import {SafeAreaView} from 'react-navigation'
+import ImagePicker from 'react-native-image-picker'
 
 export default class SignUp extends React.Component {
   state = { 
@@ -9,13 +10,33 @@ export default class SignUp extends React.Component {
         email: '', 
         password: '', 
         confirmpassword: '',
+        photo: null ,
         errorMessage: null };
 
 
+    getProfileImage = () => {
+        const options = {
+            noData: true
+        };
+
+        ImagePicker.launchImageLibrary(options, response => {
+            console.log("response", response);
+            if(response.uri) {
+                this.setState({photo: response});
+            }
+        });
+    };
+
+    checkinputs = () => {
+        if (this.state.password =! this.state.confirmpassword) {
+            alert("Passwords do not match")
+            return
+        }
+    }
 
 
   handleSignUp = (name, email) => {
-      
+    this.checkinputs()
     firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
@@ -32,6 +53,9 @@ export default class SignUp extends React.Component {
   };
 
   render() {
+
+    const {photo} = this.state;
+
     return (
         <SafeAreaView style={styles.container}>
                 <StatusBar
@@ -39,9 +63,11 @@ export default class SignUp extends React.Component {
                     barStyle="light-content"
                 />
                 <Text style={styles.title}>REGISTER</Text>
-
+            
+            <TouchableOpacity onPress={this.getProfileImage}>
+                <Image source={ photo? {uri: photo.uri} :require('../images/registerIcon.png')} style={styles.profileImage}/>
+            </TouchableOpacity>
                 
-
                 <View style={styles.container2}>
                     <TextInput 
                         style={styles.input} 
@@ -160,6 +186,11 @@ const styles = StyleSheet.create({
     },
     container2: {
         top: Math.round(Dimensions.get('window').height) * 0.2
+    },
+    profileImage: {
+        width: 150,
+        height: 150,
+        borderRadius: 75
     }
 
 });
