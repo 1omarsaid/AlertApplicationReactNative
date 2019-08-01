@@ -15,7 +15,8 @@ const App = createAppContainer(createSwitchNavigator(
     PostPage
   },
   {
-    initialRouteName: 'Root'
+    initialRouteName: 'Loading'
   }
 ));
 export default App
+

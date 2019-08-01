@@ -3,13 +3,26 @@ import {View, StyleSheet, Text, Dimensions, TouchableOpacity, Image, SegmentedCo
 import ImagePicker from 'react-native-image-picker';
 import { TextInput } from 'react-native-gesture-handler';
 import firebase from 'react-native-firebase'
+import uuid from 'uuid/v4'; // Import UUID to generate UUID
+
+
+const options = {
+    title: 'Select Image',
+    storageOptions: {
+      skipBackup: true,
+      path: 'images'
+    }
+  };
 
 
 class PostPage extends Component {
 
     state = {
-        photo: null,
-        text: ''
+        imgSource: '',
+        uploading: false,
+        progress: 0,
+        text: '',
+        imageURL: ''
     }
 
 
@@ -17,10 +30,12 @@ class PostPage extends Component {
         this.props.navigation.navigate('Root')
     }
 
-    makePost = (postText) => {
-        firebase.database().ref('user/001').set(
+    makePost = (postText, image) => {
+        this.uploadImage
+        firebase.database().ref('posts/school/Ryerson').child(`${uuid()}`).set(
             {
-                postText
+                postText,
+                image
             }
         ).then(() => {
             console.log('Inserted!');
@@ -31,24 +46,67 @@ class PostPage extends Component {
 
     }
 
-    handleChoosePhoto = () => {
-        const options = {
-            noData: true
-        };
-
-        ImagePicker.launchImageLibrary(options, response => {
-            console.log("response", response);
-            if(response.uri) {
-                this.setState({photo: response});
-            }
+    pickImage = () => {
+        ImagePicker.showImagePicker(options, response => {
+          if (response.didCancel) {
+            console.log('You cancelled image picker 😟');
+          } else if (response.error) {
+            alert('And error occured: ', response.error);
+          } else {
+            const source = { uri: response.uri };
+            this.setState({
+              imgSource: source,
+              imageUri: response.uri
+            });
+          }
         });
-        
-    };
+      };
+
+
+      uploadImage = () => {
+        const postID = `${uuid()}`; // Generate unique name
+        this.setState({ uploading: true });
+        const ref = firebase.storage().ref(`post/images/${postID}`)
+
+        ref.putFile(this.state.imageUri)
+          .on(
+            firebase.storage.TaskEvent.STATE_CHANGED,
+            snapshot => {
+              let state = {};
+              state = {
+                ...state,
+                progress: (snapshot.bytesTransferred / snapshot.totalBytes) * 100, // Calculate progress percentage
+              };
+              console.log('************Firebase*************')
+              //This resets after the upload has been done.
+              if (snapshot.state === firebase.storage.TaskState.SUCCESS) {
+                print(snapshot.ref.getDownloadURL)
+                this.setState({imageURL:snapshot.ref.getDownloadURL})
+                state = {
+                  ...state,
+                  uploading: false,
+                  imgSource: '',
+                  imageUri: '',
+                  progress: 0,
+                  text: '',
+                  imageURL: ''
+                };
+              }
+              this.setState(state);
+            },
+            //This goes off if there is an error.
+            error => {
+              unsubscribe();
+              alert('Sorry, Try again.');
+            }
+          );
+      };
+
 
     
     render(){
 
-        const { photo } = this.state;
+        const { imageURL, imageUri } = this.state;
 
         return (
             <View style={styles.container2}>
@@ -57,15 +115,15 @@ class PostPage extends Component {
                     <Text style={styles.cancel}>Cancel</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => this.makePost(this.state.text)}>
+                <TouchableOpacity onPress={() => this.makePost(this.state.text, this.state.imageURL)}>
                     <Text style={styles.post}>Post</Text>
                 </TouchableOpacity>
                 </View>
 
                 <View style= {styles.stack1}>
-                    <TouchableOpacity onPress={this.handleChoosePhoto}>
+                    <TouchableOpacity onPress={this.pickImage}>
 
-                        <Image source={ photo ? {uri: photo.uri}: require('../images/Gallery.png')} 
+                        <Image source={ imageUri ? {uri: imageUri}: require('../images/Gallery.png')} 
                         style={{width: Math.round(Dimensions.get('window').height) * 0.13, 
                                 height: Math.round(Dimensions.get('window').height) * 0.13,
                                 borderRadius: 10}}/>

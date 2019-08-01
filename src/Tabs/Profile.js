@@ -14,7 +14,7 @@ class Profile extends Component {
                     style={styles.profileImage}
                 />
                 <View>
-                    <Text style={styles.nameTag}>Name of user</Text>
+                    <Text style={styles.nameTag}>{firebase.auth().currentUser.uid}</Text>
                 </View>
                 
             </View>

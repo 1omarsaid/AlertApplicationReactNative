@@ -25,35 +25,37 @@ export default class Login extends React.Component {
 
     render() {
     return (
-        
-        <KeyboardAvoidingView behavior="padding" style={styles.container}>
-                <SafeAreaView style={styles.formContainer}>
+
+                <SafeAreaView style={styles.container}>
                         <Image 
                             source = {require('../images/alertlogo.png')}
                             style={styles.imageLogo} />
+
+                    <View style= {styles.formContainer}>
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder='Email (University Domain)'
+                            placeholderTextColor='rgba(255,255,255,0.7)'
+                            onSubmitEditing={() => this.passwordInput.focus()}
+                            returnKeyType="next"
+                            keyboardType="email-address"
+                            autoCapitalize = 'none'
+                            autoCorrect={false}
+                            onChangeText={email => this.setState({email})}
+                            value={this.state.email}
+                            />
+                        <TextInput 
+                            style={styles.input} 
+                            placeholder='Password'
+                            secureTextEntry
+                            placeholderTextColor='rgba(255,255,255,0.7)'
+                            returnKeyType="go"
+                            ref={(input) => this.passwordInput = input}
+                            onChangeText={password => this.setState({password})}
+                            value={this.state.password}
+                            />
+                    </View>
                     
-                    <TextInput 
-                        style={styles.input} 
-                        placeholder='Email (University Domain)'
-                        placeholderTextColor='rgba(255,255,255,0.7)'
-                        onSubmitEditing={() => this.passwordInput.focus()}
-                        returnKeyType="next"
-                        keyboardType="email-address"
-                        autoCapitalize = 'none'
-                        autoCorrect={false}
-                        onChangeText={email => this.setState({email})}
-                        value={this.state.email}
-                        />
-                    <TextInput 
-                        style={styles.input} 
-                        placeholder='Password'
-                        secureTextEntry
-                        placeholderTextColor='rgba(255,255,255,0.7)'
-                        returnKeyType="go"
-                        ref={(input) => this.passwordInput = input}
-                        onChangeText={password => this.setState({password})}
-                        value={this.state.password}
-                        />
 
                     <TouchableOpacity style={styles.buttonContainer} onPress={this.handleLogin}>
                         <Text onPress={this.handleLogin} style={styles.buttonText}>LOGIN</Text>
@@ -68,7 +70,6 @@ export default class Login extends React.Component {
                 
                 </SafeAreaView>
 
-            </KeyboardAvoidingView>
 
     )
   }
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#2980b9',
         height: '100%',
         width: '100%',
-        alignItems: "center"
+        alignItems: "center",
         
     },
     logoContainer:{
@@ -92,7 +93,9 @@ const styles = StyleSheet.create({
 
     },
     formContainer:{
-        width: '100%'
+        width: '100%',
+        alignItems: "center",
+        marginTop: 15
     },
     logo:{
         width: 250,
@@ -112,17 +115,20 @@ const styles = StyleSheet.create({
         color: '#FFF',
         paddingHorizontal: 5, 
         borderBottomColor: 'white',
-        borderBottomWidth: 1
+        borderBottomWidth: 1,
+        width: '95%'
     },
     buttonContainer: {
         backgroundColor: '#3498db',
-        paddingVertical: 15
+        paddingVertical: 15,
+        width: '95%'
     },
     buttonText: {
         textAlign: "center",
         color: '#FFFFFF',
         fontWeight: '700'
     },
+
     createanaccount:{
         color: "#FFFFFF",
         width: '100%',
@@ -132,9 +138,8 @@ const styles = StyleSheet.create({
         opacity: 0.8,
     },
     imageLogo: {
-        width: Math.round(Dimensions.get('window').height) * 0.2 , 
-        height: Math.round(Dimensions.get('window').height) * 0.2,
-        alignContent: "center",
+        width: Math.round(Dimensions.get('window').height) * 0.3 , 
+        height: Math.round(Dimensions.get('window').height) * 0.3
         
     }
 

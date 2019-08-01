@@ -141,7 +141,8 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         width:'100%',
-        backgroundColor: '#2980b9'
+        backgroundColor: '#2980b9',
+        alignItems: "center"
     },
     input:{
         height: 40,
@@ -149,7 +150,8 @@ const styles = StyleSheet.create({
         color: '#FFF',
         paddingHorizontal: 5, 
         borderBottomColor: 'white',
-        borderBottomWidth: 1
+        borderBottomWidth: 1,
+        width: '95%'
     },
     buttonContainer: {
         backgroundColor: '#3498db',
@@ -182,15 +184,17 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontWeight:'800',
         marginBottom: 15,
-        top: Math.round(Dimensions.get('window').height) * 0.04
+        top: Math.round(Dimensions.get('window').height) * 0.04,
     },
     container2: {
-        top: Math.round(Dimensions.get('window').height) * 0.2
+        top: Math.round(Dimensions.get('window').height) * 0.1,
+        width: '100%'
     },
     profileImage: {
         width: 150,
         height: 150,
-        borderRadius: 75
+        borderRadius: 75,
+        top: 50,
     }
 
 });
