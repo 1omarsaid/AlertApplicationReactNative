@@ -40,6 +40,7 @@ class Home extends Component {
                             <Image source={{uri: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net'}} style={{width: 70, height: 70, borderRadius: 35, marginLeft: 90, marginTop: -15}}/>
                         </View>
                     </View>
+                    
                     <View style={{width:'100%', alignItems: "center", marginTop: 40}}>
                         <SearchBar/> 
                     </View>
