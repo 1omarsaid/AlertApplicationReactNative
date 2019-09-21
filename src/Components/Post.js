@@ -1,21 +1,17 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Image, Text} from 'react-native'
+import {View, StyleSheet, Image} from 'react-native'
 
 class Post extends Component {
     render() {
-        const ShadowStyle = {
-            shadowOpacity: 0.5,
-            shadowRadius: 15,
-            elevation: 4
-        }
-        const {image, logo, name, noOfLikes, caption} = this.props;
+        
+        const {image} = this.props;
         return (
-            <View style={[styles.container, ShadowStyle]}>
+            <View style={styles.container}>
                 <Image style={styles.image} source={{uri: image}}/>
-                <View style= {styles.header}>
-                    <Image source= {{uri: logo}} style={styles.headerLogo}/>
-                    <Text style={styles.hashtag}>#FreeFood</Text>
-                </View>
+                {/* <View style= {styles.header}> */}
+                    {/* <Image source= {{uri: logo}} style={styles.headerLogo}/> */}
+                    {/* <Text style={styles.hashtag}>#FreeFood</Text> */}
+                {/* </View> */}
             </View>
 
         );
@@ -24,7 +20,8 @@ class Post extends Component {
 
 const styles = StyleSheet.create({
     container:{
-        width: '98%',
+        width: 200,
+        height: 200,
         justifyContent: 'center', 
         alignItems: 'center', 
         marginBottom: 10,
@@ -39,8 +36,10 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     image: {
-        height: 320,
+        height: 200,
         width: '100%',
+        resizeMode: 'contain'
+        
     },
     headerLogo: {
         height: 40,

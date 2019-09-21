@@ -8,7 +8,7 @@ class MarketHeader extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.title}>Market Place</Text>
+                <Text style={styles.title}>Catalog</Text>
             </View>
         );
     }
@@ -16,13 +16,13 @@ class MarketHeader extends Component {
 
 const styles = StyleSheet.create({
     container:{
-        height: Math.round(Dimensions.get('window').height) * 0.1,
+        height: Math.round(Dimensions.get('window').height) * 0.13,
         width: '100%',
         borderBottomWidth: 0.2,
         borderColor: 'rgba(0,0,0,0.7)',
         textAlign: "left",
         top: 0,
-        backgroundColor: '#2980b9',
+        backgroundColor: '#287348',
         bottom: 0,
         justifyContent: "flex-end",
         flexDirection: "column" 
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         fontWeight: '800',
         textAlign: "center",
         width: '100%',
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        marginBottom: 5
     }
 
 });

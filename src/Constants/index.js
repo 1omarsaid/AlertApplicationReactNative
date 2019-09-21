@@ -35,17 +35,6 @@ export const posts = [
         image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
         noOfLikes: 143
     },
-    {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143
-    },
-    {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143
-    }
+   
 
 ]

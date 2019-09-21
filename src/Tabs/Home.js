@@ -1,20 +1,24 @@
 import React, {Component} from 'react';
 import {View, FlatList, StyleSheet, TouchableOpacity, Text, Dimensions, Image } from 'react-native';
-import {HomeHeader,Post} from '../Components';
+import {Post} from '../Components';
 
 import {images, posts} from '../Constants'
 import { SearchBar } from '../Components/SearchBar';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class Home extends Component {
 
     renderPosts = ({item}) => (
+        <TouchableOpacity style={{padding: 10}}>
         <Post 
             image={item.image} 
-            logo={item.logo} 
-            name={item.name} 
-            noOfLikes={item.noOfLikes}
-            caption = {item.caption}
+            // logo={item.logo} 
+            // name={item.name} 
+            // noOfLikes={item.noOfLikes}
+            // caption = {item.caption}
         />
+        </TouchableOpacity>
+        
     )
 
     makeAPost = () => {
@@ -26,49 +30,48 @@ class Home extends Component {
     }
 
 
-
     render(){
         return (
             <View style={styles.container}>
-                <View style={styles.username}>
-                    <View style={{flexDirection: "row"}}>
-                        <Text style={styles.usernameText}>Omar Said</Text>
-                        <Image style={{width: 50, height: 50,backgroundColor: 'red', borderRadius: 25, marginLeft: 90, marginTop: 4}}/>
+                <ScrollView>
+                    <View style={styles.username}>
+                        <View style={{flexDirection: "row"}}>
+                            <Text style={styles.usernameText}>Omar Said</Text>
+                            <Image source={{uri: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net'}} style={{width: 70, height: 70, borderRadius: 35, marginLeft: 90, marginTop: -15}}/>
+                        </View>
                     </View>
-                </View>
-                <View style={{width:'100%', alignItems: "center", marginTop: 40}}>
-                    <SearchBar/> 
-                </View>
-                <TouchableOpacity>
-                    <View style={{width:'100%', height:190, marginTop: 30, alignItems: "center"}}>
-                        <Image style={{width: '80%', height: '100%',backgroundColor: 'red', borderRadius: 10}}/>
+                    <View style={{width:'100%', alignItems: "center", marginTop: 40}}>
+                        <SearchBar/> 
                     </View>
-                </TouchableOpacity>
-                
-                {/* this will have the list view */}
-                <View style={styles.listView}>
-                <View style={styles.headerView}>
-                <TouchableOpacity onPress={this.onViewMorePressed} style={styles.viewMoreView}>
-                    <Text
-                    numberOfLines={1}
-                    style={styles.viewMoreText}>
-                    {strings('view more')}
-                    </Text>
-                    <Image style={styles.arrowImg} source={require('./../../Assets/images/ic-arr-right.png')} />
-                </TouchableOpacity>
-                </View>
+                    <TouchableOpacity>
+                        <View style={{width:'100%', height:190, marginTop: 30, alignItems: "center"}}>
+                            <Image source ={{uri: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/11c20d00a852bfeea95b074711e46e8c/5DCB103B/t51.2885-19/s150x150/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net'}} style={{width: '80%', height: '100%', borderRadius: 10}}/>
+                        </View>
+                    </TouchableOpacity>
 
-                <FlatList
-                    horizontal={true}
-                    data={this.props.data}
-                    numColumns={1}
-                    renderItem={this.props.renderItem}
-                    keyExtractor={this.props.keyExtractor}
-                    style={styles.viewFlatList} /> 
-                </View>
+                    <View style={{width: '100%', alignItems: 'center', height: 40, marginTop: 30}}>
+                        <Text style={styles.titleCauses}>Features Causes</Text>
+                    </View>
+                    
+                    {/* this will have the list view */}
+                    <View style={styles.listView}>
+                        <FlatList
+                        horizontal={true}
+                        data={posts}
+                        numColumns={1}
+                        keyExtractor={(item, index) => index}
+                        renderItem={this.renderPosts}
+                        style={styles.viewFlatList} 
+                        /> 
 
-                
-        
+                    </View>
+
+                    <View style={{marginBottom: 135, marginTop: 10, alignItems: "center"}}>
+                        <Text style={styles.accountText}>Account Balance: $500</Text>
+                    </View>
+                    
+                </ScrollView>
+
             </View>
         );
     }
@@ -76,29 +79,39 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width: '100%',
         backgroundColor: 'white'
     },
     username:{
         width: "100%",
         height: '20%',
         flexDirection: 'column-reverse',
-        padding: 10
+        padding: 10,
+        marginTop: 40
     },
     usernameText:{
         fontSize: 45
     },
+    titleCauses: {
+        fontSize: 30,
+        fontWeight: '600',
+        color: '#287348'
+    },
+    accountText:{
+        fontSize: 25,
+        fontWeight: '400',
+        color: '#287348'
+    },
     listView: {
         backgroundColor: 'rgba(255, 255, 255, 1)',
         alignSelf: 'stretch',
-        marginTop: 14.0,
+        marginTop: 1.0,
         marginBottom: 10,
-        paddingTop: 15,
-        paddingBottom: 15,
-        shadowOffset: { width: 0.0, height: 5.0 },
-        shadowColor: 'rgba(0, 0, 0, 0.08)',
-        shadowRadius: 5.0,
-        shadowOpacity: 1,
+        paddingTop: 5,
+        paddingBottom: 5,
+        height: 300,
+
+        width: '100%'
       },
       headerView: {
         flexDirection: 'row',
@@ -107,29 +120,15 @@ const styles = StyleSheet.create({
         paddingLeft: 15,
         paddingRight: 15
       },
-      viewMoreView: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      viewMoreText: {
-        color: '#2051A4',
-        fontSize: 14.0,
-        fontFamily: montserratRegular,
-        textAlign: 'right'
-      },
-      arrowImg: {
-        resizeMode: 'center',
-    
-        marginTop: 2.0
-      },
       viewFlatList: {
         alignSelf: 'stretch',
         marginTop: 17.0,
         paddingLeft: 10,
         paddingRight: 10,
         tintColor: 'red',
-        color: 'red'
+        color: 'red',
+        height: 400,
+        // width: '100%'
       }
 
 });
