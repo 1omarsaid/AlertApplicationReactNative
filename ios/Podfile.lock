@@ -187,7 +187,7 @@ PODS:
   - Protobuf (3.9.0)
   - React (0.59.9):
     - React/Core (= 0.59.9)
-  - react-native-image-picker (0.28.0):
+  - react-native-image-picker (0.28.1):
     - React
   - React/Core (0.59.9):
     - yoga (= 0.59.9.React)
@@ -299,7 +299,7 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
-  react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
+  react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
