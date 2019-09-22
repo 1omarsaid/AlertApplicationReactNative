@@ -16,84 +16,53 @@ export const images = [
 
 export const posts = [
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Medical'
+        image: 'https://i.imgur.com/pWy36Rg.jpg',
+        category: 'Community'
     }
     ,
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/PrMiyil.jpg',
         category: 'Memorial'
     },
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/Pl3Wi33.jpg',
         category: 'Education'
     },
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/uHh6BNu.jpg',
         category: 'Animals'
     }
     ,
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/kiqndc0.jpg',
         category: 'Climate Change'
     },
+    // {
+    //     image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
+    //     category: 'Food and Shelter'
+    // },
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Food and Shelter'
-    },
-    {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/Nxyw6HF.jpg',
         category: 'Entrepreneurship'
     }
     ,
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
+        image: 'https://i.imgur.com/MxX4C1W.jpg',
         category: 'Marriage and Family'
     },
     {
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        category: 'Sports'
+        image: 'https://i.imgur.com/k7tp7Ki.jpg',
+        category: 'Medical'
     },
-    {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Travel'
-    }
-    ,
-    {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        caption: 'Community'
-    }
+    // {
+    //     image: 'https://i.imgur.com/UH6ZOs5.jpg',
+    //     category: 'Travel'
+    // }
+    // ,
+    // {
+    //     image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
+    //     caption: 'Community'
+    // }
    
 
 ]
@@ -101,33 +70,25 @@ export const posts = [
 
 export const causes = [
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Medical'
+        image: 'https://i.imgur.com/nt8VqPO.jpg',
+        category: 'School Trip'
     }
     ,
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Memorial'
+        image: 'https://i.imgur.com/wC4SqZO.jpg',        
+        category: 'Hippy Knee Surgery'
     },
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Education'
+        image: 'https://i.imgur.com/cshsoos.jpg',        
+        category: 'United Way'
     },
     {
-        name: 'omarthepoet',
-        logo: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        image: 'https://instagram.fybz1-1.fna.fbcdn.net/vp/78e0f5a706202960564aa411dc24e5c5/5DB82A0C/t51.2885-15/fr/e15/s1080x1080/66787742_496572261113916_821309908851877748_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net',
-        noOfLikes: 143,
-        category: 'Animals'
-    }
+        image: 'https://i.imgur.com/ACwsNUo.jpg',        
+        category: 'Help Steve'
+    },
+    // {
+    //     image: 'https://i.imgur.com/PJAREIX.png',        
+    //     category: 'Animals'
+    // }
 ]
 
