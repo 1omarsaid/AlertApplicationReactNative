@@ -9,6 +9,8 @@ import {  AppRegistry,
     Dimensions,
    } from 'react-native';
 import MapView from 'react-native-maps';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Images = [
   { uri: "https://i.imgur.com/nt8VqPO.jpg" },
@@ -217,6 +219,19 @@ class homelessMap extends Component {
             </View>
           ))}
         </Animated.ScrollView>
+
+        <ActionButton buttonColor="rgba(231,76,60,1)" offsetY={50} verticalOrientation="down">
+          <ActionButton.Item buttonColor='#9b59b6' title="Community" onPress={() => console.log("notes tapped!")}>
+            <Icon name="md-home" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+          <ActionButton.Item buttonColor='#3498db' title="Medical" onPress={() => {}}>
+            <Icon name="md-medical" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+          <ActionButton.Item buttonColor='#1abc9c' title="Others" onPress={() => {}}>
+            <Icon name="md-menufold" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+        </ActionButton>
+
       </View>
     );
   }
@@ -291,6 +306,12 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderColor: "rgba(130,4,150, 0.5)",
     },
+    actionButtonIcon: {
+        fontSize: 20,
+        height: 22,
+        color: 'white',
+      },
+    
   
 });
 
