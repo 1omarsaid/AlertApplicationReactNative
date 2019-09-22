@@ -9,6 +9,7 @@ class MarketHeader extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>Catalog</Text>
+                
             </View>
         );
     }
