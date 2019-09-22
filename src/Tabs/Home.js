@@ -9,13 +9,9 @@ import { ScrollView } from 'react-native-gesture-handler';
 class Home extends Component {
 
     renderPosts = ({item}) => (
-        <TouchableOpacity style={{padding: 10}}>
+        <TouchableOpacity style={{padding: 10}} onPress={this.makeAPost}>
         <Post 
-            image={item.image} 
-            // logo={item.logo} 
-            // name={item.name} 
-            // noOfLikes={item.noOfLikes}
-            // caption = {item.caption}
+            image={item.image}
         />
         </TouchableOpacity>
         
@@ -25,9 +21,6 @@ class Home extends Component {
         this.props.navigation.navigate('PostPage')
     }
 
-    onViewMorePressed = () => {
-        this.props.navigation.navigate("PostPage")
-    }
 
 
     render(){
@@ -81,14 +74,13 @@ class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
     username:{
         width: "100%",
-        height: '20%',
+        height: '16%',
         flexDirection: 'column-reverse',
-        padding: 10,
-        marginTop: 40
+        padding: 10        
     },
     usernameText:{
         fontSize: 45
