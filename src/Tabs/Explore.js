@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {View, StyleSheet, FlatList } from 'react-native';
-import {MarketHeader} from '../Components'
 import { SearchBar } from '../Components/SearchBar';
-import {PostThumb} from '../Components';
+import {PostThumb, MarketHeader} from '../Components';
 import { posts } from '../Constants';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
