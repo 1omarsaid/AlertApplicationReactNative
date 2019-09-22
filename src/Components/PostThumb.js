@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Image} from 'react-native'
+import {View, StyleSheet, Image, Text} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 class PostThumb extends Component {
 
     render() {
-        const {image} = this.props;
+        const {image, category} = this.props;
 
         return(
-            <TouchableOpacity onPress={this.onThumbPressed} style={styles.itemTouchable}>
+            
                 <View style={styles.container}>
                     <Image style={styles.imgImage} source={{uri: image}}/>
+                    <Text style={styles.textTitle}>{category}</Text>
                 </View>
-            </TouchableOpacity>
+            
         );
     }
 }
@@ -28,9 +29,14 @@ const styles = StyleSheet.create({
         padding: 2,
         paddingBottom: 10
     },
+    textTitle:{
+        fontSize: 20,
+        fontWeight: '700',
+        color:'#287348'
+    },
     container:{
         width: 200,
-        height: 200,
+        height: 180,
         justifyContent: 'center', 
         alignItems: 'center', 
         marginBottom: 10,
