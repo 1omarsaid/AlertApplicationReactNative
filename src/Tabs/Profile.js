@@ -12,7 +12,7 @@ class Profile extends Component {
                 <Image style={styles.avatar} source={{uri: 'https://i.imgur.com/fdOyAil.png'}}/>
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
-                    <Text style={styles.name}>Safery Hossain</Text>
+                    <Text style={styles.name}>Omar Said</Text>
                     <Text style={styles.info}>Member since August 2019</Text>
                     <Text style={styles.description}></Text>
                     <Image style={{width: '150%', height: 70}} source={{uri: 'https://i.imgur.com/N1DLHFp.jpg'}}/>
@@ -21,6 +21,8 @@ class Profile extends Component {
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text>LINK A CARD</Text> 
                     </TouchableOpacity>
+
+                    <Image style={{width: '150%', height: 25, bottom: -5}} source={{uri: 'https://i.imgur.com/O0f0Y5H.png'}}/>
 
                     <Image style={{width: '150%', height: 90, bottom: -30}} source={{uri: 'https://i.imgur.com/rzGwMRD.jpg'}}/>
                     <Image style={{width: '150%', height: 120, bottom: -35}} source={{uri: 'https://i.imgur.com/fsLnEcf.jpg'}}/>
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#4aB19D",
         position: 'absolute',
         bottom:170,
-        color: "#fff"
+        color: "#ffffff"
       }
 });
 
