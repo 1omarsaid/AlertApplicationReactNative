@@ -1,22 +1,38 @@
 import React, {Component} from 'react';
-import {View, Image, StyleSheet, Dimensions, Text } from 'react-native';
+import {View, Image, StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
 import firebase from 'react-native-firebase'
 
-
-
-
 class Profile extends Component {
+//                    <Image style={{width: '150%', height: 90}} source={{uri: 'https://i.imgur.com/6UcJAfI.jpg'}}/>
+
     render(){
         return (
             <View style={styles.container}>
-                <Image
-                    source = {{uri:"https://instagram.fybz1-1.fna.fbcdn.net/vp/445a1b074c9f974a5ecdb90b611503c0/5DAE35CB/t51.2885-19/s320x320/61539254_500517250487244_7080105174861086720_n.jpg?_nc_ht=instagram.fybz1-1.fna.fbcdn.net"}}
-                    style={styles.profileImage}
-                />
-                <View>
-                    <Text style={styles.nameTag}></Text>
+                <View style={styles.header}></View>
+                <Image style={styles.avatar} source={{uri: 'https://i.imgur.com/fdOyAil.png'}}/>
+                <View style={styles.body}>
+                    <View style={styles.bodyContent}>
+                    <Text style={styles.name}>Omar Said</Text>
+                    <Text style={styles.info}>Member since August 2019</Text>
+                    <Text style={styles.description}></Text>
+                    <Image style={{width: '150%', height: 70}} source={{uri: 'https://i.imgur.com/N1DLHFp.jpg'}}/>
+
+
+                    <TouchableOpacity style={styles.buttonContainer}>
+                        <Text>LINK A CARD</Text> 
+                    </TouchableOpacity>
+
+                    <Image style={{width: '150%', height: 25, bottom: -5}} source={{uri: 'https://i.imgur.com/O0f0Y5H.png'}}/>
+
+                    <Image style={{width: '150%', height: 90, bottom: -30}} source={{uri: 'https://i.imgur.com/rzGwMRD.jpg'}}/>
+                    <Image style={{width: '150%', height: 120, bottom: -35}} source={{uri: 'https://i.imgur.com/fsLnEcf.jpg'}}/>
+                    <TouchableOpacity style={styles.buttonBottom}>
+                        <Text>LOGOUT</Text> 
+                    </TouchableOpacity>
+
+                    </View>
                 </View>
-                
+
             </View>
         );
     }
@@ -27,7 +43,7 @@ const styles = StyleSheet.create({
         width:'100%',
         height:'100%',
         alignItems: 'center',
-        top: Math.round(Dimensions.get('window').height) * 0.05
+        top: -50
     },
     profileImage: {
         top: Math.round(Dimensions.get('window').height) * 0.05,
@@ -39,7 +55,75 @@ const styles = StyleSheet.create({
     nameTag: {
         fontSize: 25,
         color: 'red'
-    }
+    },
+    header:{
+        backgroundColor: "#00BFFF",
+        height:200,
+      },
+      avatar: {
+        width: 130,
+        height: 130,
+        borderRadius: 63,
+        borderWidth: 4,
+        borderColor: "white",
+        marginBottom:10,
+        alignSelf:'center',
+        position: 'absolute',
+        marginTop:130
+      },
+      name:{
+        fontSize:22,
+        color:"#FFFFFF",
+        fontWeight:'600',
+      },
+      body:{
+        marginTop:40,
+      },
+      bodyContent: {
+        flex: 1,
+        alignItems: 'center',
+        padding:30,
+      },
+      name:{
+        fontSize:28,
+        color: "#696969",
+        fontWeight: "600"
+      },
+      info:{
+        fontSize:16,
+        color: "#4aB19D",
+        marginTop:10
+      },
+      description:{
+        fontSize:16,
+        color: "#696969",
+        marginTop:10,
+        textAlign: 'center'
+      },
+      buttonContainer: {
+        marginTop:10,
+        height:45,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom:20,
+        width:250,
+        borderRadius:30,
+        backgroundColor: "#4aB19D",
+        color: "#fff"
+      },
+      buttonBottom: {
+        height:45,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width:250,
+        borderRadius:30,
+        backgroundColor: "#4aB19D",
+        position: 'absolute',
+        bottom:170,
+        color: "#ffffff"
+      }
 });
 
 export default Profile;
