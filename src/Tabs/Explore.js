@@ -4,15 +4,24 @@ import {MarketHeader} from '../Components'
 import { SearchBar } from '../Components/SearchBar';
 import {PostThumb} from '../Components';
 import { posts } from '../Constants';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 class Explore extends Component {
 
     renderPosts = ({item}) => (
+        <TouchableOpacity onPress={this.goToCauses}>
         <PostThumb
             image={item.image}
+            category={item.category}
         />
+        </TouchableOpacity>
+        
     )
+
+    goToCauses = () => {
+        this.props.navigation.navigate('Causes');
+    }
 
 
     render(){
@@ -22,7 +31,7 @@ class Explore extends Component {
                 <View style={{width:'100%', alignItems: "center", marginTop: 20}}>
                         <SearchBar/> 
                 </View>
-
+                                
                 <FlatList 
                     style={styles.flatlist}
                     renderItem={this.renderPosts}
@@ -30,7 +39,6 @@ class Explore extends Component {
                     keyExtractor={(item, index) => index}
                     numColumns={2}
                 />  
-                
             </View>
         );
     }
