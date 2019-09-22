@@ -21,9 +21,8 @@ class Profile extends Component {
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text>LINK A CARD</Text> 
                     </TouchableOpacity>
-
+                    <Text style={styles.info_2}>Interests</Text>
                     <Image style={{width: '150%', height: 25, bottom: -5}} source={{uri: 'https://i.imgur.com/O0f0Y5H.png'}}/>
-
                     <Image style={{width: '150%', height: 90, bottom: -30}} source={{uri: 'https://i.imgur.com/rzGwMRD.jpg'}}/>
                     <Image style={{width: '150%', height: 120, bottom: -35}} source={{uri: 'https://i.imgur.com/fsLnEcf.jpg'}}/>
                     <TouchableOpacity style={styles.buttonBottom}>
@@ -93,6 +92,12 @@ const styles = StyleSheet.create({
         fontSize:16,
         color: "#4aB19D",
         marginTop:10
+      },
+      info_2:{
+        fontSize:16,
+        color: "#808080",
+        left: -150,
+        top: -4
       },
       description:{
         fontSize:16,
