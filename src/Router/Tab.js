@@ -7,7 +7,7 @@ import Explore from '../Tabs/Explore';
 import Likes from '../Tabs/Likes';
 import Profile from '../Tabs/Profile';
 import Upload from '../Tabs/Upload';
-
+import homelessMap from '../Tabs/homelessMap'
 
 import Icon from 'react-native-vector-icons/Foundation'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -52,7 +52,7 @@ const Screens = {
         }),
     },
     Likes:{
-        screen: Likes,
+        screen: homelessMap,
         navigationOptions: () => ({
             tabBarIcon:({tintColor, focused}) => (
                 <Fontisto name={"map"} size={25}

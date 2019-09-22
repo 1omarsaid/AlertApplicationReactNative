@@ -14,7 +14,8 @@ const Images = [
   { uri: "https://i.imgur.com/nt8VqPO.jpg" },
   { uri: "https://i.imgur.com/wC4SqZO.jpg" },
   { uri: "https://i.imgur.com/cshsoos.jpg" },
-  { uri: "https://i.imgur.com/ACwsNUo.jpg" }
+  { uri: "https://i.imgur.com/ACwsNUo.jpg" },
+  { uri: "https://i.imgur.com/PJAREIX.png"}
 ]
 
 
@@ -28,7 +29,7 @@ const Images = [
 
 
 
-class Likes extends Component {
+class homelessMap extends Component {
     //43.649994, -79.379611
 
     index;
@@ -56,6 +57,15 @@ class Likes extends Component {
             title: "HIPPY KNEE SURGERY",
             description: "HIPPY THE DOG BROKE HIS KNEE AND NEEDS A SURGERY",
             image: Images[1],
+          },
+          {
+            coordinate: {
+              latitude: 43.644538,
+              longitude: -79.384675,
+            },
+            title: "United Way",
+            description: "WE ARE UNTIEDSAD ASDASD ",
+            image: Images[4],
           },
           {
             coordinate: {
@@ -287,4 +297,4 @@ const styles = StyleSheet.create({
    
 
 
-export default Likes;
+export default homelessMap;
